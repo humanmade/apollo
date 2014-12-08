@@ -468,6 +468,42 @@ a:hover {
 .progress.spinner-comment-edit {
   padding: 9px 0 13px;
 }
+
+#nav-p2 {
+  margin: 0 0 0 1.9804835607147224%;
+  padding: 0;
+
+  ul.p2-list {
+
+    padding-left: .5em;
+    margin-bottom: 4em;
+
+    a:hover {
+      //background: #a52025;
+      color: #b5b5b5;
+    }
+  
+    li {
+      display: inline-block;
+      padding: 0.5em 0.25em;
+      margin:  0.5em 0;
+
+      a {
+        padding: .857em 1.387em;
+        color: #d5d5d5;
+        -webkit-border-radius: 0.327em;
+        border-radius:         0.327em;
+        border-bottom: 1px solid;
+      }
+      a.active {
+        padding: .857em 1.387em;
+        -webkit-border-radius: 0.327em;
+        border-radius:         0.327em;
+        border-bottom: 1px solid #c1272d;
+      }
+    }
+  }
+}
 #logo-wrapper {
   width: auto !important;
   max-width: 85.998em;
@@ -480,14 +516,13 @@ a:hover {
   width:172px;
   height:33px;
 }
-
 #header {
   display:none;
   border-bottom: 1px solid #dddddd;
   -webkit-box-shadow: 0 0.327em 0 0 rgba(0, 0, 0, 0.05);
   box-shadow: 0 0.327em 0 0 rgba(0, 0, 0, 0.05);
   margin-bottom: 2.618em;
-  padding: 1.618em 0;
+  padding: 1.618em;
   position: relative;
   background-color: $bg_light;
 }
