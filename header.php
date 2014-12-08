@@ -50,6 +50,39 @@
 
 </div>
 
+<div id="nav-p2">
+
+	<ul class="p2-list">
+		<?php // Get all the multisite blogs
+		$sites   = wp_get_sites();
+		$blog_id = get_current_blog_id();
+
+		foreach ( $sites as $site) {
+
+// for testing purposes
+// if ( $site['blog_id'] === "1"  || $site['blog_id'] === "8" || $site['blog_id'] === "10" ) {
+			if ( $site['blog_id'] === "1" ) {
+				continue; // Do not list Human Made site
+			}
+
+			$active_class = 'inactive';
+
+			if ( intval( $site['blog_id'] ) === $blog_id ) {
+				$active_class = 'active';
+			}
+
+			$blog_details = get_blog_details( $site['blog_id'] );?>
+
+			<li class="button-p2">
+				<a class="<?php echo $active_class; ?>" href="<?php echo 'http://' . $site['domain']; ?>"><?php echo $blog_details->blogname; ?></a>
+			</li>
+
+		<?php
+		} ?>
+	</ul>
+
+</div>
+
 <div id="logo-wrapper">
 <div id="logo">
 	&nbsp;
